@@ -346,54 +346,6 @@
                                 class="inline-block w-5 h-5 stroke-1 fill-slate-100 group-data-[topbar=dark]:fill-topbar-item-bg-hover-dark group-data-[topbar=brand]:fill-topbar-item-bg-hover-brand"></i>
                         </button>
                     </div>
-                    @if (Laravel\Jetstream\Jetstream::hasTeamFeatures())
-                        <div class="relative flex items-center dropdown md:flex">
-                            <button type="button"
-                                class="inline-block p-0 transition-all duration-200 ease-linear bg-topbar rounded-full text-topbar-item dropdown-toggle btn hover:bg-topbar-item-bg-hover hover:text-topbar-item-hover group-data-[topbar=dark]:text-topbar-item-dark group-data-[topbar=dark]:bg-topbar-dark group-data-[topbar=dark]:hover:bg-topbar-item-bg-hover-dark group-data-[topbar=dark]:hover:text-topbar-item-hover-dark group-data-[topbar=brand]:bg-topbar-brand group-data-[topbar=brand]:hover:bg-topbar-item-bg-hover-brand group-data-[topbar=brand]:hover:text-topbar-item-hover-brand group-data-[topbar=dark]:dark:bg-zink-700 group-data-[topbar=dark]:dark:hover:bg-zink-600 group-data-[topbar=brand]:text-topbar-item-brand group-data-[topbar=dark]:dark:hover:text-zink-50 group-data-[topbar=dark]:dark:text-zink-200"
-                                id="dropdownMenuButton" data-bs-toggle="dropdown">
-                                <i data-lucide="users"
-                                    class="inline-block w-5 h-5 stroke-1 fill-slate-100 group-data-[topbar=dark]:fill-topbar-item-bg-hover-dark group-data-[topbar=brand]:fill-topbar-item-bg-hover-brand"></i>
-                            </button>
-                            <div class="absolute z-50 hidden p-4 ltr:text-left rtl:text-right bg-white rounded-md shadow-md !top-4 dropdown-menu min-w-[14rem] dark:bg-zink-600"
-                                aria-labelledby="dropdownMenuButton">
-                                <h5 class="mb-2 text-sm font-normal text-slate-500 dark:text-zink-300 flex">
-                                    {{ Auth::user()->currentTeam->name }}
-                                    <svg class="ms-2 -me-0.5 h-4 w-4" xmlns="http://www.w3.org/2000/svg"
-                                        fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
-                                        <path stroke-linecap="round" stroke-linejoin="round"
-                                            d="M8.25 15L12 18.75 15.75 15m-7.5-6L12 5.25 15.75 9" />
-                                    </svg>
-                                </h5>
-                                <ul class="pt-2 mt-2 border-t border-slate-200 dark:border-zink-500">
-                                    <li>
-                                        <a class="block ltr:pr-4 rtl:pl-4 py-1.5 text-base font-medium transition-all duration-200 ease-linear text-slate-600 dropdown-item hover:text-custom-500 focus:text-custom-500 dark:text-zink-200 dark:hover:text-custom-500 dark:focus:text-custom-500"
-                                            href="{{ route('teams.show', Auth::user()->currentTeam->id) }}"><i
-                                                data-lucide="user-2"
-                                                class="inline-block size-4 ltr:mr-2 rtl:ml-2"></i> Team Setting</a>
-                                    </li>
-                                    @can('create', Laravel\Jetstream\Jetstream::newTeamModel())
-                                        <li>
-                                            <a class="block ltr:pr-4 rtl:pl-4 py-1.5 text-base font-medium transition-all duration-200 ease-linear text-slate-600 dropdown-item hover:text-custom-500 focus:text-custom-500 dark:text-zink-200 dark:hover:text-custom-500 dark:focus:text-custom-500"
-                                                href="{{ route('teams.create') }}"><i data-lucide="user-2"
-                                                    class="inline-block size-4 ltr:mr-2 rtl:ml-2"></i> Create New Team</a>
-                                        </li>
-                                    @endcan
-                                    <!-- Team Switcher -->
-                                    @if (Auth::user()->allTeams()->count() > 1)
-                                        <div class="border-t border-gray-200 mt-3 dark:border-zink-500"></div>
-
-                                        <div class="block px-4 py-2 text-xs text-gray-400">
-                                            {{ __('Switch Teams') }}
-                                        </div>
-
-                                        @foreach (Auth::user()->allTeams() as $team)
-                                            <x-switchable-team :team="$team" />
-                                        @endforeach
-                                    @endif
-                                </ul>
-                            </div>
-                        </div>
-                    @endif
 
                     <div class="relative flex items-center dropdown h-header">
                         <button type="button"
