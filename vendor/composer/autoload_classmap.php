@@ -23,6 +23,7 @@ return array(
     'App\\Http\\Controllers\\Controller' => $baseDir . '/app/Http/Controllers/Controller.php',
     'App\\Http\\Controllers\\RouteController' => $baseDir . '/app/Http/Controllers/RouteController.php',
     'App\\Http\\Controllers\\TailwickController' => $baseDir . '/app/Http/Controllers/TailwickController.php',
+    'App\\Http\\Controllers\\Web\\ProfileController' => $baseDir . '/app/Http/Controllers/Web/ProfileController.php',
     'App\\Http\\Kernel' => $baseDir . '/app/Http/Kernel.php',
     'App\\Http\\Middleware\\Authenticate' => $baseDir . '/app/Http/Middleware/Authenticate.php',
     'App\\Http\\Middleware\\EncryptCookies' => $baseDir . '/app/Http/Middleware/EncryptCookies.php',
@@ -6442,4 +6443,8 @@ return array(
     'Whoops\\Util\\SystemFacade' => $vendorDir . '/filp/whoops/src/Whoops/Util/SystemFacade.php',
     'Whoops\\Util\\TemplateHelper' => $vendorDir . '/filp/whoops/src/Whoops/Util/TemplateHelper.php',
     'voku\\helper\\ASCII' => $vendorDir . '/voku/portable-ascii/src/voku/helper/ASCII.php',
+    'zoparga\\ReviewRateable\\Contracts\\ReviewRateable' => $vendorDir . '/zoparga/review-rateable/src/Contracts/ReviewRateable.php',
+    'zoparga\\ReviewRateable\\Models\\Rating' => $vendorDir . '/zoparga/review-rateable/src/Models/Rating.php',
+    'zoparga\\ReviewRateable\\ReviewRateableServiceProvider' => $vendorDir . '/zoparga/review-rateable/src/ReviewRateableServiceProvider.php',
+    'zoparga\\ReviewRateable\\Traits\\ReviewRateable' => $vendorDir . '/zoparga/review-rateable/src/Traits/ReviewRateable.php',
 );

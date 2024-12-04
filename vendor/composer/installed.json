@@ -8716,6 +8716,60 @@
                 "source": "https://github.com/webmozarts/assert/tree/1.11.0"
             },
             "install-path": "../webmozart/assert"
+        },
+        {
+            "name": "zoparga/review-rateable",
+            "version": "1.0.0",
+            "version_normalized": "1.0.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/zoparga/laravel-review-rateable.git",
+                "reference": "5dd09b4beccd86e006d97998544541f4c23767f2"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/zoparga/laravel-review-rateable/zipball/5dd09b4beccd86e006d97998544541f4c23767f2",
+                "reference": "5dd09b4beccd86e006d97998544541f4c23767f2",
+                "shasum": ""
+            },
+            "time": "2021-01-11T15:59:02+00:00",
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "zoparga\\ReviewRateable\\ReviewRateableServiceProvider"
+                    ]
+                }
+            },
+            "installation-source": "dist",
+            "autoload": {
+                "psr-4": {
+                    "zoparga\\ReviewRateable\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Papp Zoltan",
+                    "email": "zoltan@pappz.hu"
+                }
+            ],
+            "description": "Rating system for Laravel",
+            "keywords": [
+                "Rating",
+                "ReviewRateable",
+                "laravel",
+                "rateable",
+                "reviewable"
+            ],
+            "support": {
+                "issues": "https://github.com/zoparga/laravel-review-rateable/issues",
+                "source": "https://github.com/zoparga/laravel-review-rateable/tree/1.0.0"
+            },
+            "install-path": "../zoparga/review-rateable"
         }
     ],
     "dev": true,

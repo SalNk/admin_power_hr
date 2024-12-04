@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "1c09e200138f1411e46dbd34015f72db",
+    "content-hash": "db6f75b5a955c38f4a7d1ad96ce881df",
     "packages": [
         {
             "name": "bacon/bacon-qr-code",
@@ -6235,6 +6235,57 @@
                 "source": "https://github.com/webmozarts/assert/tree/1.11.0"
             },
             "time": "2022-06-03T18:03:27+00:00"
+        },
+        {
+            "name": "zoparga/review-rateable",
+            "version": "1.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/zoparga/laravel-review-rateable.git",
+                "reference": "5dd09b4beccd86e006d97998544541f4c23767f2"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/zoparga/laravel-review-rateable/zipball/5dd09b4beccd86e006d97998544541f4c23767f2",
+                "reference": "5dd09b4beccd86e006d97998544541f4c23767f2",
+                "shasum": ""
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "zoparga\\ReviewRateable\\ReviewRateableServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "zoparga\\ReviewRateable\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Papp Zoltan",
+                    "email": "zoltan@pappz.hu"
+                }
+            ],
+            "description": "Rating system for Laravel",
+            "keywords": [
+                "Rating",
+                "ReviewRateable",
+                "laravel",
+                "rateable",
+                "reviewable"
+            ],
+            "support": {
+                "issues": "https://github.com/zoparga/laravel-review-rateable/issues",
+                "source": "https://github.com/zoparga/laravel-review-rateable/tree/1.0.0"
+            },
+            "time": "2021-01-11T15:59:02+00:00"
         }
     ],
     "packages-dev": [

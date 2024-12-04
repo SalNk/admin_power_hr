@@ -41,6 +41,10 @@ class ComposerStaticInit1c09e200138f1411e46dbd34015f72db
     );
 
     public static $prefixLengthsPsr4 = array (
+        'z' => 
+        array (
+            'zoparga\\ReviewRateable\\' => 23,
+        ),
         'v' => 
         array (
             'voku\\' => 5,
@@ -185,6 +189,10 @@ class ComposerStaticInit1c09e200138f1411e46dbd34015f72db
     );
 
     public static $prefixDirsPsr4 = array (
+        'zoparga\\ReviewRateable\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/zoparga/review-rateable/src',
+        ),
         'voku\\' => 
         array (
             0 => __DIR__ . '/..' . '/voku/portable-ascii/src/voku',
@@ -347,8 +355,8 @@ class ComposerStaticInit1c09e200138f1411e46dbd34015f72db
         ),
         'Psr\\Http\\Message\\' => 
         array (
-            0 => __DIR__ . '/..' . '/psr/http-message/src',
-            1 => __DIR__ . '/..' . '/psr/http-factory/src',
+            0 => __DIR__ . '/..' . '/psr/http-factory/src',
+            1 => __DIR__ . '/..' . '/psr/http-message/src',
         ),
         'Psr\\Http\\Client\\' => 
         array (
@@ -571,6 +579,7 @@ class ComposerStaticInit1c09e200138f1411e46dbd34015f72db
         'App\\Http\\Controllers\\Controller' => __DIR__ . '/../..' . '/app/Http/Controllers/Controller.php',
         'App\\Http\\Controllers\\RouteController' => __DIR__ . '/../..' . '/app/Http/Controllers/RouteController.php',
         'App\\Http\\Controllers\\TailwickController' => __DIR__ . '/../..' . '/app/Http/Controllers/TailwickController.php',
+        'App\\Http\\Controllers\\Web\\ProfileController' => __DIR__ . '/../..' . '/app/Http/Controllers/Web/ProfileController.php',
         'App\\Http\\Kernel' => __DIR__ . '/../..' . '/app/Http/Kernel.php',
         'App\\Http\\Middleware\\Authenticate' => __DIR__ . '/../..' . '/app/Http/Middleware/Authenticate.php',
         'App\\Http\\Middleware\\EncryptCookies' => __DIR__ . '/../..' . '/app/Http/Middleware/EncryptCookies.php',
@@ -6990,6 +6999,10 @@ class ComposerStaticInit1c09e200138f1411e46dbd34015f72db
         'Whoops\\Util\\SystemFacade' => __DIR__ . '/..' . '/filp/whoops/src/Whoops/Util/SystemFacade.php',
         'Whoops\\Util\\TemplateHelper' => __DIR__ . '/..' . '/filp/whoops/src/Whoops/Util/TemplateHelper.php',
         'voku\\helper\\ASCII' => __DIR__ . '/..' . '/voku/portable-ascii/src/voku/helper/ASCII.php',
+        'zoparga\\ReviewRateable\\Contracts\\ReviewRateable' => __DIR__ . '/..' . '/zoparga/review-rateable/src/Contracts/ReviewRateable.php',
+        'zoparga\\ReviewRateable\\Models\\Rating' => __DIR__ . '/..' . '/zoparga/review-rateable/src/Models/Rating.php',
+        'zoparga\\ReviewRateable\\ReviewRateableServiceProvider' => __DIR__ . '/..' . '/zoparga/review-rateable/src/ReviewRateableServiceProvider.php',
+        'zoparga\\ReviewRateable\\Traits\\ReviewRateable' => __DIR__ . '/..' . '/zoparga/review-rateable/src/Traits/ReviewRateable.php',
     );
 
     public static function getInitializer(ClassLoader $loader)
