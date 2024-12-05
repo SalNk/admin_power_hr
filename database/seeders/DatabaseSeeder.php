@@ -6,6 +6,7 @@ namespace Database\Seeders;
 
 use App\Models\User;
 use Illuminate\Database\Seeder;
+use Spatie\Permission\Models\Role;
 
 class DatabaseSeeder extends Seeder
 {
@@ -20,6 +21,22 @@ class DatabaseSeeder extends Seeder
         //     'name' => 'Test User',
         //     'email' => 'test@example.com',
         // ]);
+
+        Role::create(['name' => 'admin']);
+        Role::create(['name' => 'candidate']);
+        Role::create(['name' => 'employee']);
+        Role::create(['name' => 'supervisor']);
+        Role::create(['name' => 'customer']);
+        // Create a user with a single role
+        $user = User::factory()->withRoles('admin')->create();
+
+        // Create a user with multiple roles
+        $user = User::factory()->withRoles(['admin'])->create();
+
+        // Create multiple users with the same role
+        $users = User::factory(20)->withRoles('candidate')->create();
+        $employees = User::factory(20)->withRoles('employee')->create();
+        $customers = User::factory(5)->withRoles('customer')->create();
         
     }
 }

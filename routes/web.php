@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\RouteController;
 use App\Http\Controllers\TailwickController;
+use App\Http\Controllers\Web\ClientController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -18,6 +19,11 @@ use Illuminate\Support\Facades\Route;
 Route::get('index/{locale}', [TailwickController::class, 'lang']);
 
 Route::middleware(['auth:sanctum', config('jetstream.auth_session'), 'verified',])->group(function () {
+    Route::resource('customers', ClientController::class);
     Route::get("/", [RouteController::class, 'index'])->name('dashboard');
     Route::get("{any}", [RouteController::class, 'routes']);
+
+    
 });
+
+

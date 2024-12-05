@@ -11,7 +11,7 @@
     "t-one-page": "Une page",
     "t-product": "Produit",
     "t-apps": "Applications",
-    "t-chat": "Chat",
+    "t-customer": "Client",
     "t-calendar": "Calendrier",
     "t-default": "Défaut",
     "t-month-grid": "Grille mensuelle",
@@ -159,5 +159,7 @@
     "t-level-2.1": "Niveau 2.1",
     "t-level-2.2": "Niveau 2.2",
     "t-level 3.1": "Niveau 3.1",
-    "t-level-3.2": "Niveau 3.2"
+    "t-level-3.2": "Niveau 3.2",
+    "t-name": "Nom",
+    "t-phone-number": "Télephone"
 }

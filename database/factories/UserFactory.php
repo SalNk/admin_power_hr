@@ -34,6 +34,18 @@ class UserFactory extends Factory
     }
 
     /**
+     * Assign roles to the user.
+     *
+     * @param string|array|Role $roles
+     */
+    public function withRoles($roles): static
+    {
+        return $this->afterCreating(function (User $user) use ($roles) {
+            $user->assignRole($roles);
+        });
+    }
+
+    /**
      * Indicate that the model's email address should be unverified.
      */
     public function unverified(): static
