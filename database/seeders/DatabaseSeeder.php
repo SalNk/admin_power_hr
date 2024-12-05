@@ -4,6 +4,7 @@ namespace Database\Seeders;
 
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 
+use App\Models\Client;
 use App\Models\Job;
 use App\Models\User;
 use Database\Factories\PersonneFactory;
@@ -48,6 +49,8 @@ class DatabaseSeeder extends Seeder
         Profile::factory(40)->create();
         */
 
-        Job::factory(40)->create();
+        //Job::factory(40)->create();
+
+        Client::factory(10)->create();
     }
 }

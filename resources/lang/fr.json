@@ -178,5 +178,10 @@
     "t-overview-earning": "Pretention Salariale",
     "t-max-earning": "Salaire Maximum par mois",
     "t-min-earning": "Salaire Minimum par mois",
-    "t-list-users": "Liste des Utilisateurs"
+    "t-list-users": "Liste des Utilisateurs",
+    "t-list-job": "Liste des Travaux",
+    "t-job-title": "Travail",
+    "t-job-name": "Intitulé",
+    "t-category": "Catégorie",
+    "t-salary": "Salaire"
 }

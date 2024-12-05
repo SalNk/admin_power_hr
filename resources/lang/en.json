@@ -179,5 +179,10 @@
     "t-overview-earning": "Pretention Earning",
     "t-max-earning": "Maximum Earning per month",
     "t-min-earning": "Minimum Earning per month",
-    "t-list-users": "List Users"
+    "t-list-users": "List Users",
+    "t-list-job": "List Jobs",
+    "t-job-title": "Job",
+    "t-job-name": "Name",
+    "t-category": "Category",
+    "t-salary": "Salary"
 }

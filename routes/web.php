@@ -3,6 +3,7 @@
 use App\Http\Controllers\RouteController;
 use App\Http\Controllers\TailwickController;
 use App\Http\Controllers\Web\ClientController;
+use App\Http\Controllers\Web\JobController;
 use App\Http\Controllers\Web\UserController;
 use Illuminate\Support\Facades\Route;
 
@@ -24,6 +25,7 @@ Route::middleware(['auth:sanctum', config('jetstream.auth_session'), 'verified',
     Route::resource('users', UserController::class)->only([
         'index', 'show', 'destroy'
     ]);
+    Route::resource('jobs', JobController::class);
 
     Route::get("/", [RouteController::class, 'index'])->name('dashboard');
     Route::get("{any}", [RouteController::class, 'routes']);
