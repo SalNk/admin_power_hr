@@ -11,6 +11,7 @@ use Database\Factories\PersonneFactory;
 use Illuminate\Database\Seeder;
 use App\Models\Personne;
 use App\Models\Profile;
+use App\Models\Skill;
 use Spatie\Permission\Models\Role;
 
 class DatabaseSeeder extends Seeder
@@ -49,8 +50,10 @@ class DatabaseSeeder extends Seeder
         Profile::factory(40)->create();
         */
 
-        //Job::factory(40)->create();
+        //Job::factory(10)->create();
 
-        Client::factory(10)->create();
+        //Client::factory(10)->create();
+
+        Skill::factory(400)->create();
     }
 }

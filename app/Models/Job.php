@@ -21,16 +21,40 @@ class Job extends Model
     protected $casts = [
         'is_current' => 'boolean',
         'is_open' => 'boolean',
-        'available_until' => 'date'
+        'available_until' => 'date',
+        //'skills' => 'array'
     ];
 
     public function user(): BelongsTo
     {
-        return $this->belongsTo(User::class);
+        return $this->belongsTo(User::class)->with('customer');
     }
 
     public function category(): BelongsTo
     {
         return $this->belongsTo(Category::class);
+    }
+
+    public function findMatchingUsers()
+    {
+        // Récupérer tous les utilisateurs avec leurs skills
+        $jobSkills = $this->skills;
+        if (is_string($jobSkills)) {
+            $jobSkills = explode(',', $jobSkills);
+        }
+        
+        $users = User::with('skills', 'personne','profile')
+        ->whereHas('skills', function ($query) use ($jobSkills) {
+            $query->whereIn('name', $jobSkills);
+        })
+        ->withCount([
+            'skills as matching_skills_count' => function ($query) use ($jobSkills) {
+                $query->whereIn('name', $jobSkills);
+            }
+        ])
+        ->orderByDesc('matching_skills_count')
+        ->get();
+
+        return $users;
     }
 }

@@ -13,7 +13,7 @@ class JobController extends Controller
      */
     public function index()
     {
-         $jobs = Job::latest()-> paginate(10);
+        $jobs = Job::with('user', 'category')->latest()-> paginate(10);
         return view('job.index',[
             'jobs' => $jobs
         ]);
@@ -38,9 +38,14 @@ class JobController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(string $id)
+    public function show(string $matricule)
     {
-        //
+        $job = Job::with('user')-> where('matricule', $matricule)->firstOrFail();
+        $matchingUsers = $job->findMatchingUsers();
+        return view('job.show',[
+            'job' => $job,
+            'matchingUsers' => $matchingUsers
+        ]);
     }
 
     /**
