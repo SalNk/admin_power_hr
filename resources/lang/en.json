@@ -162,5 +162,8 @@
     "t-level 3.1": "Level 3.1",
     "t-level-3.2": "Level 3.2",
     "t-name": "Name",
-    "t-phone-number": "Phone Number"
+    "t-phone-number": "Phone Number",
+    "t-utilisateur": "User",
+    "t-employee": "Employee",
+    "t-candidate": "Candidate"
 }

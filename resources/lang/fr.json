@@ -161,5 +161,8 @@
     "t-level 3.1": "Niveau 3.1",
     "t-level-3.2": "Niveau 3.2",
     "t-name": "Nom",
-    "t-phone-number": "Télephone"
+    "t-phone-number": "Télephone",
+    "t-utilisateur": "Utilisateurs",
+    "t-employee": "Employé",
+    "t-candidate": "Candidat"
 }
