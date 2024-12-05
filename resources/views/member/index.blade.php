@@ -20,7 +20,16 @@
                         </div>
                     </div>
                 </div>
+
+                
                 <div class="!py-3.5 card-body border-y border-dashed border-slate-200 dark:border-zink-500">
+                    @if (session('delete-success'))
+                        <div
+                            class="px-4 py-3 text-sm text-red-500 bg-white border border-red-300 rounded-md dark:bg-zink-700 dark:border-red-500">
+                            <span class="font-bold">Notification</span> 
+                            {{ session('delete-success') }}
+                        </div>
+                    @endif
                     <form action="#!">
                         <div class="grid grid-cols-1 gap-5 xl:grid-cols-12">
                             <div class="relative xl:col-span-2">
@@ -76,7 +85,8 @@
                                         {{ __('t-name') }}
                                     </th>
                                     <th class="px-3.5 py-2.5 first:pl-5 last:pr-5 font-semibold sort" data-sort="location">
-                                        Location</th>
+                                        {{__('t-location')}}
+                                    </th>
                                     <th class="px-3.5 py-2.5 first:pl-5 last:pr-5 font-semibold sort" data-sort="email">
                                         Email</th>
                                     <th class="px-3.5 py-2.5 first:pl-5 last:pr-5 font-semibold sort"
@@ -101,8 +111,15 @@
                                                     type="checkbox">
                                             </div>
                                         </td>
-                                        <td class="px-3.5 py-2.5 first:pl-5 last:pr-5"><a href="#!"
-                                                class="transition-all duration-150 ease-linear text-custom-500 hover:text-custom-600 user-id">#TW1500001</a>
+                                        <td class="px-3.5 py-2.5 first:pl-5 last:pr-5">
+                                            @if($member->personne)
+                                            <a href="{{route('users.show', $member->personne->id)}}"
+                                                class="transition-all duration-150 ease-linear text-custom-500 hover:text-custom-600 user-id">
+                                                {{$member->personne->matricule}}
+                                            </a>
+                                            @else
+                                                ---
+                                            @endif
                                         </td>
                                         <td class="px-3.5 py-2.5 first:pl-5 last:pr-5">
                                             <div class="flex items-center gap-2">
@@ -113,39 +130,56 @@
                                                 </div>
                                                 <div class="grow">
                                                     <h6 class="mb-1">
-                                                        <a href="#!" class="name">
-                                                            {{$member->name}}
+                                                        <a href="{{route('users.show', $member->id)}}" class="name">
+                                                            @if($member->personne)
+                                                                {{$member->personne->nom}} {{$member->personne->postNom}} {{$member->personne->prenom}}
+                                                            @else
+                                                                {{$member->name}}
+                                                            @endif
                                                         </a>
                                                     </h6>
-                                                    <p class="text-slate-500 dark:text-zink-200">Graphic Designer</p>
+                                                    <p class="text-slate-500 dark:text-zink-200">
+                                                        @if($member->profile)
+                                                            {{$member->profile->title}}
+                                                        @endif
+                                                    </p>
                                                 </div>
                                             </div>
                                         </td>
-                                        <td class="px-3.5 py-2.5 first:pl-5 last:pr-5 location">United Kingdom</td>
+                                        <td class="px-3.5 py-2.5 first:pl-5 last:pr-5 location">
+                                            @if($member->profile)
+                                                {{$member->profile->location}}
+                                            @else
+                                                ---
+                                            @endif
+                                        </td>
                                         <td class="px-3.5 py-2.5 first:pl-5 last:pr-5 email">
                                             {{$member->email}}
                                         </td>
-                                        <td class="px-3.5 py-2.5 first:pl-5 last:pr-5 phone-number">853 565 9802</td>
+                                        <td class="px-3.5 py-2.5 first:pl-5 last:pr-5 phone-number">
+                                            @if($member->personne)
+                                            {{$member->personne->telephone}}
+                                            @endif
+                                        </td>
                                         <td class="px-3.5 py-2.5 first:pl-5 last:pr-5 joining-date">
                                             {{date('d-m-Y', strtotime($member->created_at))}}
                                         </td>
                                         <td class="px-3.5 py-2.5 first:pl-5 last:pr-5">
-                                            @if ($member->hasRole('candidate'))
+                                            @if ($member->hasRole('employee'))
                                                 <span
                                                     class="px-2.5 py-0.5 text-xs font-medium rounded border bg-green-100 border-transparent text-green-500 dark:bg-green-500/20 dark:border-transparent inline-flex items-center status"><i
                                                         data-lucide="check-circle" class="size-3 mr-1.5"></i> 
-                                                        Canditat
+                                                        {{__('t-employee')}}
                                                 </span>
                                             @endif
 
-                                            @if ($member->hasRole('employee'))
+                                            @if ($member->hasRole('candidate'))
                                                 <span
                                                     class="px-2.5 py-0.5 inline-flex items-center text-xs font-medium rounded border bg-slate-100 border-transparent text-slate-500 dark:bg-slate-500/20 dark:text-zink-200 dark:border-transparent status"><i
                                                     data-lucide="loader" class="size-3 mr-1.5"></i> 
-                                                    {{__('t-employee')}}
+                                                     Canditat
                                                 </span>
                                             @endif
-
                                         </td>
 
                                         
@@ -165,13 +199,6 @@
                                                             href="{{ route('users.show', $member->id) }}"><i data-lucide="eye"
                                                                 class="inline-block size-3 ltr:mr-1 rtl:ml-1"></i> <span
                                                                 class="align-middle">Overview</span></a>
-                                                    </li>
-                                                    <li>
-                                                        <a data-modal-target="addUserModal"
-                                                            class="block px-4 py-1.5 text-base transition-all duration-200 ease-linear text-slate-600 dropdown-item hover:bg-slate-100 hover:text-slate-500 focus:bg-slate-100 focus:text-slate-500 dark:text-zink-100 dark:hover:bg-zink-500 dark:hover:text-zink-200 dark:focus:bg-zink-500 dark:focus:text-zink-200"
-                                                            href="#!"><i data-lucide="file-edit"
-                                                                class="inline-block size-3 ltr:mr-1 rtl:ml-1"></i> <span
-                                                                class="align-middle">Edit</span></a>
                                                     </li>
                                                     <li>
                                                         <a data-modal-target="deleteModal"
@@ -309,14 +336,23 @@
                     <div class="flex justify-center gap-2 mt-6">
                         <button type="reset" data-modal-close="deleteModal"
                             class="bg-white text-slate-500 btn hover:text-slate-500 hover:bg-slate-100 focus:text-slate-500 focus:bg-slate-100 active:text-slate-500 active:bg-slate-100 dark:bg-zink-600 dark:hover:bg-slate-500/10 dark:focus:bg-slate-500/10 dark:active:bg-slate-500/10">Cancel</button>
-                        <button type="submit"
-                            class="text-white bg-red-500 border-red-500 btn hover:text-white hover:bg-red-600 hover:border-red-600 focus:text-white focus:bg-red-600 focus:border-red-600 focus:ring focus:ring-red-100 active:text-white active:bg-red-600 active:border-red-600 active:ring active:ring-red-100 dark:ring-custom-400/20">Yes,
-                            Delete It!</button>
+                        <form action="{{ route('users.destroy', $member->id) }}" method="POST" class="inline">
+                            @csrf
+                            @method('DELETE')
+                            <button type="submit"
+                                class="text-white bg-red-500 border-red-500 btn hover:text-white hover:bg-red-600 hover:border-red-600 focus:text-white focus:bg-red-600 focus:border-red-600 focus:ring focus:ring-red-100 active:text-white active:bg-red-600 active:border-red-600 active:ring active:ring-red-100 dark:ring-custom-400/20">
+                                Yes, Delete It!
+                            </button>
+                        </form>
+                        
                     </div>
                 </div>
             </div>
         </div>
     </div>
+
+
+    
 @endsection
 @push('scripts')
     <!-- list js-->
