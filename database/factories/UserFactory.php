@@ -77,4 +77,8 @@ class UserFactory extends Factory
             'ownedTeams'
         );
     }
+
+    public function customer(){
+        return User::role('customer')->inRandomOrder()->value('id');
+    }
 }
