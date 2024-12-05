@@ -21,7 +21,10 @@ Route::get('index/{locale}', [TailwickController::class, 'lang']);
 
 Route::middleware(['auth:sanctum', config('jetstream.auth_session'), 'verified',])->group(function () {
     Route::resource('customers', ClientController::class);
-    Route::resource('users', UserController::class);
+    Route::resource('users', UserController::class)->only([
+        'index', 'show', 'destroy'
+    ]);
+
     Route::get("/", [RouteController::class, 'index'])->name('dashboard');
     Route::get("{any}", [RouteController::class, 'routes']);
 

@@ -177,5 +177,6 @@
     "t-overview-no-profile": "Pas de profil, veuillez remplir votre profil et vos données personnelles pour voir votre aperçu",
     "t-overview-earning": "Pretention Salariale",
     "t-max-earning": "Salaire Maximum par mois",
-    "t-min-earning": "Salaire Minimum par mois"
+    "t-min-earning": "Salaire Minimum par mois",
+    "t-list-users": "Liste des Utilisateurs"
 }

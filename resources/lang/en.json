@@ -178,5 +178,6 @@
     "t-overview-no-profile": "No profile, please fill your profile and personnal data to see your overview",
     "t-overview-earning": "Pretention Earning",
     "t-max-earning": "Maximum Earning per month",
-    "t-min-earning": "Minimum Earning per month"
+    "t-min-earning": "Minimum Earning per month",
+    "t-list-users": "List Users"
 }

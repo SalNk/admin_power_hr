@@ -1,10 +1,10 @@
 @extends('layouts.master')
 @section('title')
-    {{ __('List View') }}
+    {{ __('t-list-users') }}
 @endsection
 @section('content')
     <!-- page title -->
-    <x-page-title title="List View" pagetitle="Users" />
+    <x-page-title title="{{ __('t-list-users') }}" pagetitle="Users" />
 
     <div class="grid grid-cols-1 gap-x-5 xl:grid-cols-12">
         <div class="xl:col-span-12">
