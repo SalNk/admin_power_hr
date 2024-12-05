@@ -74,4 +74,9 @@ class User extends Authenticatable implements ReviewRateable
     {
         return $this->hasOne(Personne::class);
     }
+
+    public function profile(): HasOne
+    {
+        return $this->hasOne(Profile::class);
+    }
 }

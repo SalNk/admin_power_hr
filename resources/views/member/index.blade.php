@@ -127,7 +127,7 @@
                                         </td>
                                         <td class="px-3.5 py-2.5 first:pl-5 last:pr-5 phone-number">853 565 9802</td>
                                         <td class="px-3.5 py-2.5 first:pl-5 last:pr-5 joining-date">
-                                            {{$member->created_at}}
+                                            {{date('d-m-Y', strtotime($member->created_at))}}
                                         </td>
                                         <td class="px-3.5 py-2.5 first:pl-5 last:pr-5">
                                             @if ($member->hasRole('candidate'))

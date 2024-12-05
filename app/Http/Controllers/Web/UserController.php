@@ -14,7 +14,7 @@ class UserController extends Controller
      */
     public function index()
     {
-        $members = User:: with('personne')->role(['candidate', 'employee'])->paginate(20);
+        $members = User:: with('personne', 'profile')->role(['candidate', 'employee'])->paginate(20);
 
         return view('member.index', [
             'members' => $members
@@ -42,7 +42,7 @@ class UserController extends Controller
      */
     public function show(string $id) //: View
     {
-        $user = User::with('personne')->findOrFail($id);
+        $user = User::with('personne', 'profile')->findOrFail($id);
         return view('member.show', [
             'user' => $user
         ]);

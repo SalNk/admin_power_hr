@@ -164,5 +164,18 @@
     "t-phone-number": "Télephone",
     "t-utilisateur": "Utilisateurs",
     "t-employee": "Employé",
-    "t-candidate": "Candidat"
+    "t-candidate": "Candidat",
+    "t-gender": "Genre",
+    "t-hire": "Engager",
+    "t-projects": "Projets",
+    "t-similar": "Similaire",
+    "t-personnal-informations": "Informations Personnelles",
+    "t-designation": "Désignation",
+    "t-birth-date": "Date de Naissance",
+    "t-location": "Localisation",
+    "t-joining-date": "Date d'Adhésion",
+    "t-overview-no-profile": "Pas de profil, veuillez remplir votre profil et vos données personnelles pour voir votre aperçu",
+    "t-overview-earning": "Pretention Salariale",
+    "t-max-earning": "Salaire Maximum par mois",
+    "t-min-earning": "Salaire Minimum par mois"
 }
