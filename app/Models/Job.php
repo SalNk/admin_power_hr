@@ -57,4 +57,9 @@ class Job extends Model
 
         return $users;
     }
+
+    public function candidates()
+    {
+        return $this->hasMany(JobUser::class)->with('user');
+    }
 }

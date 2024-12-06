@@ -184,5 +184,8 @@
     "t-job-title": "Job",
     "t-job-name": "Name",
     "t-category": "Category",
-    "t-salary": "Salary"
+    "t-salary": "Salary",
+    "t-add-job": "Hire",
+    "t-choose-job": "Choose a Job",
+    "t-choose-user": "Choose a User"
 }

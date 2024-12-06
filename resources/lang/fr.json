@@ -183,5 +183,8 @@
     "t-job-title": "Travail",
     "t-job-name": "Intitulé",
     "t-category": "Catégorie",
-    "t-salary": "Salaire"
+    "t-salary": "Salaire",
+    "t-add-job": "Embaucher",
+    "t-choose-job": "Choisir un Travail",
+    "t-choose-user": "Choisir un Employé"
 }
