@@ -13,6 +13,7 @@
         "laravel/tinker": "^2.9",
         "livewire/livewire": "^3.0",
         "spatie/laravel-permission": "^6.10",
+        "willvincent/laravel-rateable": "^3.3",
         "zoparga/review-rateable": "^1.0"
     },
     "require-dev": {

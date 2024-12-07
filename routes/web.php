@@ -25,6 +25,7 @@ Route::middleware(['auth:sanctum', config('jetstream.auth_session'), 'verified',
     Route::resource('users', UserController::class)->only([
         'index', 'show', 'destroy'
     ]);
+    Route::post('user/ratings', [UserController::class, 'rating'])->name('user.rating');
     Route::resource('jobs', JobController::class);
 
     Route::get("/", [RouteController::class, 'index'])->name('dashboard');

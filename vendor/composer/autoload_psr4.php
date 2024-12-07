@@ -7,6 +7,7 @@ $baseDir = dirname($vendorDir);
 
 return array(
     'zoparga\\ReviewRateable\\' => array($vendorDir . '/zoparga/review-rateable/src'),
+    'willvincent\\Rateable\\' => array($vendorDir . '/willvincent/laravel-rateable/src'),
     'voku\\' => array($vendorDir . '/voku/portable-ascii/src/voku'),
     'Whoops\\' => array($vendorDir . '/filp/whoops/src/Whoops'),
     'Webmozart\\Assert\\' => array($vendorDir . '/webmozart/assert/src'),

@@ -86,4 +86,9 @@ class User extends Authenticatable implements ReviewRateable
     {
         return $this->hasMany(Skill::class);
     }
+
+    public function ratings(): HasOne
+    {
+        return $this->hasOne(AccountRating::class);
+    }
 }

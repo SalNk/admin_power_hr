@@ -46,6 +46,10 @@ class ComposerStaticInit1c09e200138f1411e46dbd34015f72db
         array (
             'zoparga\\ReviewRateable\\' => 23,
         ),
+        'w' => 
+        array (
+            'willvincent\\Rateable\\' => 21,
+        ),
         'v' => 
         array (
             'voku\\' => 5,
@@ -194,6 +198,10 @@ class ComposerStaticInit1c09e200138f1411e46dbd34015f72db
         'zoparga\\ReviewRateable\\' => 
         array (
             0 => __DIR__ . '/..' . '/zoparga/review-rateable/src',
+        ),
+        'willvincent\\Rateable\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/willvincent/laravel-rateable/src',
         ),
         'voku\\' => 
         array (
@@ -585,7 +593,10 @@ class ComposerStaticInit1c09e200138f1411e46dbd34015f72db
         'App\\Http\\Controllers\\Controller' => __DIR__ . '/../..' . '/app/Http/Controllers/Controller.php',
         'App\\Http\\Controllers\\RouteController' => __DIR__ . '/../..' . '/app/Http/Controllers/RouteController.php',
         'App\\Http\\Controllers\\TailwickController' => __DIR__ . '/../..' . '/app/Http/Controllers/TailwickController.php',
+        'App\\Http\\Controllers\\Web\\ClientController' => __DIR__ . '/../..' . '/app/Http/Controllers/Web/ClientController.php',
+        'App\\Http\\Controllers\\Web\\JobController' => __DIR__ . '/../..' . '/app/Http/Controllers/Web/JobController.php',
         'App\\Http\\Controllers\\Web\\ProfileController' => __DIR__ . '/../..' . '/app/Http/Controllers/Web/ProfileController.php',
+        'App\\Http\\Controllers\\Web\\UserController' => __DIR__ . '/../..' . '/app/Http/Controllers/Web/UserController.php',
         'App\\Http\\Kernel' => __DIR__ . '/../..' . '/app/Http/Kernel.php',
         'App\\Http\\Middleware\\Authenticate' => __DIR__ . '/../..' . '/app/Http/Middleware/Authenticate.php',
         'App\\Http\\Middleware\\EncryptCookies' => __DIR__ . '/../..' . '/app/Http/Middleware/EncryptCookies.php',
@@ -597,7 +608,14 @@ class ComposerStaticInit1c09e200138f1411e46dbd34015f72db
         'App\\Http\\Middleware\\TrustProxies' => __DIR__ . '/../..' . '/app/Http/Middleware/TrustProxies.php',
         'App\\Http\\Middleware\\ValidateSignature' => __DIR__ . '/../..' . '/app/Http/Middleware/ValidateSignature.php',
         'App\\Http\\Middleware\\VerifyCsrfToken' => __DIR__ . '/../..' . '/app/Http/Middleware/VerifyCsrfToken.php',
+        'App\\Models\\Category' => __DIR__ . '/../..' . '/app/Models/Category.php',
+        'App\\Models\\Client' => __DIR__ . '/../..' . '/app/Models/Client.php',
+        'App\\Models\\Job' => __DIR__ . '/../..' . '/app/Models/Job.php',
+        'App\\Models\\JobUser' => __DIR__ . '/../..' . '/app/Models/JobUser.php',
         'App\\Models\\Membership' => __DIR__ . '/../..' . '/app/Models/Membership.php',
+        'App\\Models\\Personne' => __DIR__ . '/../..' . '/app/Models/Personne.php',
+        'App\\Models\\Profile' => __DIR__ . '/../..' . '/app/Models/Profile.php',
+        'App\\Models\\Skill' => __DIR__ . '/../..' . '/app/Models/Skill.php',
         'App\\Models\\Team' => __DIR__ . '/../..' . '/app/Models/Team.php',
         'App\\Models\\TeamInvitation' => __DIR__ . '/../..' . '/app/Models/TeamInvitation.php',
         'App\\Models\\User' => __DIR__ . '/../..' . '/app/Models/User.php',
@@ -802,6 +820,12 @@ class ComposerStaticInit1c09e200138f1411e46dbd34015f72db
         'DASPRiD\\Enum\\Exception\\SerializeNotSupportedException' => __DIR__ . '/..' . '/dasprid/enum/src/Exception/SerializeNotSupportedException.php',
         'DASPRiD\\Enum\\Exception\\UnserializeNotSupportedException' => __DIR__ . '/..' . '/dasprid/enum/src/Exception/UnserializeNotSupportedException.php',
         'DASPRiD\\Enum\\NullValue' => __DIR__ . '/..' . '/dasprid/enum/src/NullValue.php',
+        'Database\\Factories\\CategoryFactory' => __DIR__ . '/../..' . '/database/factories/CategoryFactory.php',
+        'Database\\Factories\\ClientFactory' => __DIR__ . '/../..' . '/database/factories/ClientFactory.php',
+        'Database\\Factories\\JobFactory' => __DIR__ . '/../..' . '/database/factories/JobFactory.php',
+        'Database\\Factories\\PersonneFactory' => __DIR__ . '/../..' . '/database/factories/PersonneFactory.php',
+        'Database\\Factories\\ProfileFactory' => __DIR__ . '/../..' . '/database/factories/ProfileFactory.php',
+        'Database\\Factories\\SkillFactory' => __DIR__ . '/../..' . '/database/factories/SkillFactory.php',
         'Database\\Factories\\TeamFactory' => __DIR__ . '/../..' . '/database/factories/TeamFactory.php',
         'Database\\Factories\\UserFactory' => __DIR__ . '/../..' . '/database/factories/UserFactory.php',
         'Database\\Seeders\\DatabaseSeeder' => __DIR__ . '/../..' . '/database/seeders/DatabaseSeeder.php',
@@ -7034,6 +7058,9 @@ class ComposerStaticInit1c09e200138f1411e46dbd34015f72db
         'Whoops\\Util\\SystemFacade' => __DIR__ . '/..' . '/filp/whoops/src/Whoops/Util/SystemFacade.php',
         'Whoops\\Util\\TemplateHelper' => __DIR__ . '/..' . '/filp/whoops/src/Whoops/Util/TemplateHelper.php',
         'voku\\helper\\ASCII' => __DIR__ . '/..' . '/voku/portable-ascii/src/voku/helper/ASCII.php',
+        'willvincent\\Rateable\\Rateable' => __DIR__ . '/..' . '/willvincent/laravel-rateable/src/Rateable.php',
+        'willvincent\\Rateable\\RateableServiceProvider' => __DIR__ . '/..' . '/willvincent/laravel-rateable/src/RateableServiceProvider.php',
+        'willvincent\\Rateable\\Rating' => __DIR__ . '/..' . '/willvincent/laravel-rateable/src/Rating.php',
         'zoparga\\ReviewRateable\\Contracts\\ReviewRateable' => __DIR__ . '/..' . '/zoparga/review-rateable/src/Contracts/ReviewRateable.php',
         'zoparga\\ReviewRateable\\Models\\Rating' => __DIR__ . '/..' . '/zoparga/review-rateable/src/Models/Rating.php',
         'zoparga\\ReviewRateable\\ReviewRateableServiceProvider' => __DIR__ . '/..' . '/zoparga/review-rateable/src/ReviewRateableServiceProvider.php',

@@ -8804,6 +8804,79 @@
             "install-path": "../webmozart/assert"
         },
         {
+            "name": "willvincent/laravel-rateable",
+            "version": "3.3.1",
+            "version_normalized": "3.3.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/willvincent/laravel-rateable.git",
+                "reference": "2a8b0e120b220f72f6247a4d9eaa70262c44319e"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/willvincent/laravel-rateable/zipball/2a8b0e120b220f72f6247a4d9eaa70262c44319e",
+                "reference": "2a8b0e120b220f72f6247a4d9eaa70262c44319e",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/database": "^8.53 || ^9.0|^10.0 || ^11.0",
+                "illuminate/support": "^8.0 || ^9.0|^10.0 || ^11.0",
+                "php": "^8.0"
+            },
+            "require-dev": {
+                "orchestra/testbench": "^6.23 || ^7.0|^8.0 || ^9.0",
+                "phpunit/phpunit": "^9.5 || ^10.5"
+            },
+            "time": "2024-11-10T20:41:12+00:00",
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "willvincent\\Rateable\\RateableServiceProvider"
+                    ]
+                }
+            },
+            "installation-source": "dist",
+            "autoload": {
+                "psr-4": {
+                    "willvincent\\Rateable\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Will Vincent",
+                    "email": "tcindie@gmail.com",
+                    "homepage": "https://willvincent.com"
+                }
+            ],
+            "description": "Allows multiple models to be rated with a fivestar like system.",
+            "homepage": "https://github.com/willvincent/laravel-rateable",
+            "keywords": [
+                "Rating",
+                "fivestar",
+                "laravel",
+                "laravel 8",
+                "laravel 9",
+                "rateable",
+                "vote"
+            ],
+            "support": {
+                "issues": "https://github.com/willvincent/laravel-rateable/issues",
+                "source": "https://github.com/willvincent/laravel-rateable/tree/3.3.1"
+            },
+            "funding": [
+                {
+                    "url": "https://github.com/willvincent",
+                    "type": "github"
+                }
+            ],
+            "install-path": "../willvincent/laravel-rateable"
+        },
+        {
             "name": "zoparga/review-rateable",
             "version": "1.0.0",
             "version_normalized": "1.0.0.0",
