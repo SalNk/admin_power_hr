@@ -91,4 +91,9 @@ class User extends Authenticatable implements ReviewRateable
     {
         return $this->hasOne(AccountRating::class);
     }
+
+    public function getIsEmployeeAttribute()
+    {
+        return $this->hasRole('employee');
+    }
 }

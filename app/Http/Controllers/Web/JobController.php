@@ -27,7 +27,7 @@ class JobController extends Controller
     public function create()
     {
         $jobs = Job::where('is_open', true)->get();
-        $hireds = JobUser::where('is_active', true)->get();
+        $hireds = JobUser::where('is_active', true)->with('user', 'job')->get();
         $users = User:: with('personne', 'profile')->role(['candidate', 'employee'])->get();
         return view('job.add',[
             'jobs' => $jobs,

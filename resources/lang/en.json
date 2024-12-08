@@ -196,5 +196,15 @@
     "t-billing": "Billing",
     "t-invoice": "Invoice",
     "t-invoice-list": "List Invoices",
-    "t-invoice-add": "Add Invoice"
+    "t-invoice-add": "Add Invoice",
+    "t-welcome": "Welcome",
+    "t-total-users": "Total Users",
+    "t-total-customers": "Total Customers",
+    "t-total-candidates": "Total Candidates",
+    "t-total-employees": "Total Employees",
+    "t-approval-employee": "Approval Employee",
+    "t-approval-employer": "Approval Employer",
+    "t-created-date": "Created Date",
+    "t-employer": "Employer",
+    "t-status": "Status"
 }

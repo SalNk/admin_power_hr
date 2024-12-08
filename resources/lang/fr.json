@@ -195,5 +195,15 @@
     "t-billing": "Facturation",
     "t-invoice": "Facture",
     "t-invoice-list": "Liste des Factures",
-    "t-invoice-add": "Ajouter une Facture"
+    "t-invoice-add": "Ajouter une Facture",
+    "t-welcome": "Bienvenue",
+    "t-total-users": "Total Utilisateurs",
+    "t-total-customers": "Total Clients",
+    "t-total-candidates": "Total Candidats",
+    "t-total-employees": "Total Employés",
+    "t-approval-employee": "Approbation Employé",
+    "t-approval-employer": "Approbation Employeur",
+    "t-created-date": "Date de Création",
+    "t-employer": "Employeur",
+    "t-status": "Statut"
 }
