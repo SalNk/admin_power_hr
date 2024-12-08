@@ -206,5 +206,6 @@
     "t-approval-employer": "Approval Employer",
     "t-created-date": "Created Date",
     "t-employer": "Employer",
-    "t-status": "Status"
+    "t-status": "Status",
+    "t-welcome-message": "This space is for you to manage your account, jobs, clients, and employees. You can also more."
 }

@@ -205,5 +205,6 @@
     "t-approval-employer": "Approbation Employeur",
     "t-created-date": "Date de Création",
     "t-employer": "Employeur",
-    "t-status": "Statut"
+    "t-status": "Statut",
+    "t-welcome-message": "Cette espace est pour vous gérer votre compte, vos emplois, vos clients et vos employés. Vous pouvez aussi plus."
 }

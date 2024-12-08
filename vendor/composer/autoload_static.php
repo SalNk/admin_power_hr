@@ -186,12 +186,14 @@ class ComposerStaticInit1c09e200138f1411e46dbd34015f72db
         'B' => 
         array (
             'Brick\\Math\\' => 11,
+            'Balping\\JsonRaw\\' => 16,
             'BaconQrCode\\' => 12,
         ),
         'A' => 
         array (
             'ArielMejiaDev\\LarapexCharts\\' => 28,
             'App\\' => 4,
+            'Akaunting\\Apexcharts\\' => 21,
         ),
     );
 
@@ -565,6 +567,10 @@ class ComposerStaticInit1c09e200138f1411e46dbd34015f72db
         array (
             0 => __DIR__ . '/..' . '/brick/math/src',
         ),
+        'Balping\\JsonRaw\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/balping/json-raw-encoder/src',
+        ),
         'BaconQrCode\\' => 
         array (
             0 => __DIR__ . '/..' . '/bacon/bacon-qr-code/src',
@@ -578,9 +584,48 @@ class ComposerStaticInit1c09e200138f1411e46dbd34015f72db
             0 => __DIR__ . '/../..' . '/app',
             1 => __DIR__ . '/..' . '/laravel/pint/app',
         ),
+        'Akaunting\\Apexcharts\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/akaunting/laravel-apexcharts/src',
+        ),
     );
 
     public static $classMap = array (
+        'Akaunting\\Apexcharts\\Chart' => __DIR__ . '/..' . '/akaunting/laravel-apexcharts/src/Chart.php',
+        'Akaunting\\Apexcharts\\Facade' => __DIR__ . '/..' . '/akaunting/laravel-apexcharts/src/Facade.php',
+        'Akaunting\\Apexcharts\\Options\\Annotations' => __DIR__ . '/..' . '/akaunting/laravel-apexcharts/src/Options/Annotations.php',
+        'Akaunting\\Apexcharts\\Options\\Chart' => __DIR__ . '/..' . '/akaunting/laravel-apexcharts/src/Options/Chart.php',
+        'Akaunting\\Apexcharts\\Options\\DataLabels' => __DIR__ . '/..' . '/akaunting/laravel-apexcharts/src/Options/DataLabels.php',
+        'Akaunting\\Apexcharts\\Options\\Fill' => __DIR__ . '/..' . '/akaunting/laravel-apexcharts/src/Options/Fill.php',
+        'Akaunting\\Apexcharts\\Options\\ForecastDataPoints' => __DIR__ . '/..' . '/akaunting/laravel-apexcharts/src/Options/ForecastDataPoints.php',
+        'Akaunting\\Apexcharts\\Options\\Grid' => __DIR__ . '/..' . '/akaunting/laravel-apexcharts/src/Options/Grid.php',
+        'Akaunting\\Apexcharts\\Options\\Legend' => __DIR__ . '/..' . '/akaunting/laravel-apexcharts/src/Options/Legend.php',
+        'Akaunting\\Apexcharts\\Options\\Markers' => __DIR__ . '/..' . '/akaunting/laravel-apexcharts/src/Options/Markers.php',
+        'Akaunting\\Apexcharts\\Options\\NoData' => __DIR__ . '/..' . '/akaunting/laravel-apexcharts/src/Options/NoData.php',
+        'Akaunting\\Apexcharts\\Options\\PlotOptions' => __DIR__ . '/..' . '/akaunting/laravel-apexcharts/src/Options/PlotOptions.php',
+        'Akaunting\\Apexcharts\\Options\\Responsive' => __DIR__ . '/..' . '/akaunting/laravel-apexcharts/src/Options/Responsive.php',
+        'Akaunting\\Apexcharts\\Options\\States' => __DIR__ . '/..' . '/akaunting/laravel-apexcharts/src/Options/States.php',
+        'Akaunting\\Apexcharts\\Options\\Stroke' => __DIR__ . '/..' . '/akaunting/laravel-apexcharts/src/Options/Stroke.php',
+        'Akaunting\\Apexcharts\\Options\\Subtitle' => __DIR__ . '/..' . '/akaunting/laravel-apexcharts/src/Options/Subtitle.php',
+        'Akaunting\\Apexcharts\\Options\\Theme' => __DIR__ . '/..' . '/akaunting/laravel-apexcharts/src/Options/Theme.php',
+        'Akaunting\\Apexcharts\\Options\\Title' => __DIR__ . '/..' . '/akaunting/laravel-apexcharts/src/Options/Title.php',
+        'Akaunting\\Apexcharts\\Options\\Tooltip' => __DIR__ . '/..' . '/akaunting/laravel-apexcharts/src/Options/Tooltip.php',
+        'Akaunting\\Apexcharts\\Options\\Xaxis' => __DIR__ . '/..' . '/akaunting/laravel-apexcharts/src/Options/Xaxis.php',
+        'Akaunting\\Apexcharts\\Options\\Yaxis' => __DIR__ . '/..' . '/akaunting/laravel-apexcharts/src/Options/Yaxis.php',
+        'Akaunting\\Apexcharts\\Provider' => __DIR__ . '/..' . '/akaunting/laravel-apexcharts/src/Provider.php',
+        'Akaunting\\Apexcharts\\Support\\DatasetClass' => __DIR__ . '/..' . '/akaunting/laravel-apexcharts/src/Support/DatasetClass.php',
+        'Akaunting\\Apexcharts\\Traits\\Formatter' => __DIR__ . '/..' . '/akaunting/laravel-apexcharts/src/Traits/Formatter.php',
+        'Akaunting\\Apexcharts\\Traits\\Types' => __DIR__ . '/..' . '/akaunting/laravel-apexcharts/src/Traits/Types.php',
+        'Akaunting\\Apexcharts\\Types\\Area' => __DIR__ . '/..' . '/akaunting/laravel-apexcharts/src/Types/Area.php',
+        'Akaunting\\Apexcharts\\Types\\Bar' => __DIR__ . '/..' . '/akaunting/laravel-apexcharts/src/Types/Bar.php',
+        'Akaunting\\Apexcharts\\Types\\Donut' => __DIR__ . '/..' . '/akaunting/laravel-apexcharts/src/Types/Donut.php',
+        'Akaunting\\Apexcharts\\Types\\HeatMap' => __DIR__ . '/..' . '/akaunting/laravel-apexcharts/src/Types/HeatMap.php',
+        'Akaunting\\Apexcharts\\Types\\HorizontalBar' => __DIR__ . '/..' . '/akaunting/laravel-apexcharts/src/Types/HorizontalBar.php',
+        'Akaunting\\Apexcharts\\Types\\Line' => __DIR__ . '/..' . '/akaunting/laravel-apexcharts/src/Types/Line.php',
+        'Akaunting\\Apexcharts\\Types\\Pie' => __DIR__ . '/..' . '/akaunting/laravel-apexcharts/src/Types/Pie.php',
+        'Akaunting\\Apexcharts\\Types\\PolarArea' => __DIR__ . '/..' . '/akaunting/laravel-apexcharts/src/Types/PolarArea.php',
+        'Akaunting\\Apexcharts\\Types\\Radar' => __DIR__ . '/..' . '/akaunting/laravel-apexcharts/src/Types/Radar.php',
+        'Akaunting\\Apexcharts\\Types\\Radial' => __DIR__ . '/..' . '/akaunting/laravel-apexcharts/src/Types/Radial.php',
         'App\\Actions\\Fortify\\CreateNewUser' => __DIR__ . '/../..' . '/app/Actions/Fortify/CreateNewUser.php',
         'App\\Actions\\Fortify\\PasswordValidationRules' => __DIR__ . '/../..' . '/app/Actions/Fortify/PasswordValidationRules.php',
         'App\\Actions\\Fortify\\ResetUserPassword' => __DIR__ . '/../..' . '/app/Actions/Fortify/ResetUserPassword.php',
@@ -593,6 +638,7 @@ class ComposerStaticInit1c09e200138f1411e46dbd34015f72db
         'App\\Actions\\Jetstream\\InviteTeamMember' => __DIR__ . '/../..' . '/app/Actions/Jetstream/InviteTeamMember.php',
         'App\\Actions\\Jetstream\\RemoveTeamMember' => __DIR__ . '/../..' . '/app/Actions/Jetstream/RemoveTeamMember.php',
         'App\\Actions\\Jetstream\\UpdateTeamName' => __DIR__ . '/../..' . '/app/Actions/Jetstream/UpdateTeamName.php',
+        'App\\Charts\\MonthlyUsersChart' => __DIR__ . '/../..' . '/app/Charts/MonthlyUsersChart.php',
         'App\\Console\\Kernel' => __DIR__ . '/../..' . '/app/Console/Kernel.php',
         'App\\Exceptions\\Handler' => __DIR__ . '/../..' . '/app/Exceptions/Handler.php',
         'App\\Http\\Controllers\\Controller' => __DIR__ . '/../..' . '/app/Http/Controllers/Controller.php',
@@ -716,6 +762,9 @@ class ComposerStaticInit1c09e200138f1411e46dbd34015f72db
         'BaconQrCode\\Renderer\\RendererStyle\\GradientType' => __DIR__ . '/..' . '/bacon/bacon-qr-code/src/Renderer/RendererStyle/GradientType.php',
         'BaconQrCode\\Renderer\\RendererStyle\\RendererStyle' => __DIR__ . '/..' . '/bacon/bacon-qr-code/src/Renderer/RendererStyle/RendererStyle.php',
         'BaconQrCode\\Writer' => __DIR__ . '/..' . '/bacon/bacon-qr-code/src/Writer.php',
+        'Balping\\JsonRaw\\Encoder' => __DIR__ . '/..' . '/balping/json-raw-encoder/src/Encoder.php',
+        'Balping\\JsonRaw\\Raw' => __DIR__ . '/..' . '/balping/json-raw-encoder/src/Raw.php',
+        'Balping\\JsonRaw\\Replacer' => __DIR__ . '/..' . '/balping/json-raw-encoder/src/Replacer.php',
         'Brick\\Math\\BigDecimal' => __DIR__ . '/..' . '/brick/math/src/BigDecimal.php',
         'Brick\\Math\\BigInteger' => __DIR__ . '/..' . '/brick/math/src/BigInteger.php',
         'Brick\\Math\\BigNumber' => __DIR__ . '/..' . '/brick/math/src/BigNumber.php',
