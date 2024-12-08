@@ -187,5 +187,14 @@
     "t-salary": "Salary",
     "t-add-job": "Hire",
     "t-choose-job": "Choose a Job",
-    "t-choose-user": "Choose a User"
+    "t-choose-user": "Choose a User",
+    "t-management": "Management",
+    "t-quotation": "Quotation",
+    "t-quotation-list": "List Quotations",
+    "t-quotation-add": "Add Quotation",
+    "t-quotation-edit": "Edit Quotation",
+    "t-billing": "Billing",
+    "t-invoice": "Invoice",
+    "t-invoice-list": "List Invoices",
+    "t-invoice-add": "Add Invoice"
 }

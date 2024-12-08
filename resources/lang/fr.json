@@ -186,5 +186,14 @@
     "t-salary": "Salaire",
     "t-add-job": "Embaucher",
     "t-choose-job": "Choisir un Travail",
-    "t-choose-user": "Choisir un Employé"
+    "t-choose-user": "Choisir un Employé",
+    "t-management": "Gestion",
+    "t-quotation": "Devis",
+    "t-quotation-list": "Liste des Devis",
+    "t-quotation-add": "Ajouter un Devis",
+    "t-quotation-edit": "Modifier le Devis",
+    "t-billing": "Facturation",
+    "t-invoice": "Facture",
+    "t-invoice-list": "Liste des Factures",
+    "t-invoice-add": "Ajouter une Facture"
 }
