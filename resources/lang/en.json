@@ -207,5 +207,7 @@
     "t-created-date": "Created Date",
     "t-employer": "Employer",
     "t-status": "Status",
-    "t-welcome-message": "This space is for you to manage your account, jobs, clients, and employees. You can also more."
+    "t-welcome-message": "This space is for you to manage your account, jobs, clients, and employees. You can also more.",
+    "t-dont-have-account": "Don't have an account ?",
+    "t-sign-in-to-continue": "Sign in to continue to"
 }

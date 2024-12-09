@@ -172,18 +172,15 @@
                     </div>
                 </div>
             </div>
-        </div><!--end col-->
+        </div><!--end 
         <div class="col-span-12 card 2xl:col-span-4 2xl:row-span-2">
             <div class="card-body">
                 <div class="apex-charts">
-                    {!! $jobsChart->container() !!}
-
-                    {!! $jobsChart->script() !!}
                 </div>
                 <div id="mainChart"  class="apex-charts" data-chart-colors='["bg-red-500", "bg-green-500"]'
                     dir="ltr"></div>
             </div>
-        </div><!--end col-->
+        </div>end col-->
         <div class="col-span-12 card md:col-span-6 lg:col-span-3 2xl:col-span-2">
             <div class="text-center card-body">
                 <div

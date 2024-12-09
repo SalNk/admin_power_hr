@@ -206,5 +206,7 @@
     "t-created-date": "Date de Création",
     "t-employer": "Employeur",
     "t-status": "Statut",
-    "t-welcome-message": "Cette espace est pour vous gérer votre compte, vos emplois, vos clients et vos employés. Vous pouvez aussi plus."
+    "t-welcome-message": "Cette espace est pour vous gérer votre compte, vos emplois, vos clients et vos employés. Vous pouvez aussi plus.",
+    "t-dont-have-account": "Vous n'avez pas de compte ?",
+    "t-sign-in-to-continue": "Connectez-vous pour continuer à"
 }
