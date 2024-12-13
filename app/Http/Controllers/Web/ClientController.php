@@ -40,7 +40,11 @@ class ClientController extends Controller
      */
     public function show(string $id)
     {
-        //
+        $customer = User::with('customer')->findOrFail($id);
+
+        return view('customer.show', [
+            'customer' => $customer
+        ]);
     }
 
     /**

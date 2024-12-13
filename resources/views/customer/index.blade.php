@@ -52,7 +52,7 @@
                                                 </div>
                                                 <div class="grow">
                                                     <h6 class="mb-1">
-                                                        <a href="#!" class="name">
+                                                        <a href="{{route('customers.show', $customer->id)}}" class="name">
                                                             {{$customer->customer->name}}
                                                         </a>
                                                     </h6>
