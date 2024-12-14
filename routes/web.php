@@ -5,6 +5,7 @@ use App\Http\Controllers\TailwickController;
 use App\Http\Controllers\Web\AdminController;
 use App\Http\Controllers\Web\ClientController;
 use App\Http\Controllers\Web\JobController;
+use App\Http\Controllers\Web\ProspetController;
 use App\Http\Controllers\Web\UserController;
 use Illuminate\Support\Facades\Route;
 
@@ -30,6 +31,10 @@ Route::middleware(['auth:sanctum', config('jetstream.auth_session'), 'verified',
     Route::resource('admin', AdminController::class);
     Route::resource('jobs', JobController::class);
 
+    Route::controller(ProspetController::class)->name('prospect.')->prefix('prospect')->group(function(){
+        Route::get('/', 'index')->name('index');
+        Route::get('{id}', 'show')->name('show');
+    });
     Route::get("/", [RouteController::class, 'index'])->name('dashboard');
     Route::get("{any}", [RouteController::class, 'routes']);
 
