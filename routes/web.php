@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\RouteController;
 use App\Http\Controllers\TailwickController;
+use App\Http\Controllers\Web\AdminController;
 use App\Http\Controllers\Web\ClientController;
 use App\Http\Controllers\Web\JobController;
 use App\Http\Controllers\Web\UserController;
@@ -26,6 +27,7 @@ Route::middleware(['auth:sanctum', config('jetstream.auth_session'), 'verified',
         'index', 'show', 'destroy'
     ]);
     Route::post('user/ratings', [UserController::class, 'rating'])->name('user.rating');
+    Route::resource('admin', AdminController::class);
     Route::resource('jobs', JobController::class);
 
     Route::get("/", [RouteController::class, 'index'])->name('dashboard');

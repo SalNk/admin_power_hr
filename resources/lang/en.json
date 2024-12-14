@@ -209,5 +209,10 @@
     "t-status": "Status",
     "t-welcome-message": "This space is for you to manage your account, jobs, clients, and employees. You can also more.",
     "t-dont-have-account": "Don't have an account ?",
-    "t-sign-in-to-continue": "Sign in to continue to"
+    "t-sign-in-to-continue": "Sign in to continue to",
+    "t-admin-created-successfully": "Admin created successfully",
+    "t-admin-deleted-successfully": "Admin deleted successfully",
+    "t-admin-creation-failed": "Admin creation failed",
+    "t-admin-deletion-failed": "Admin deletion failed",
+    "t-admin": "Administrator"
 }

@@ -208,5 +208,10 @@
     "t-status": "Statut",
     "t-welcome-message": "Cette espace est pour vous gérer votre compte, vos emplois, vos clients et vos employés. Vous pouvez aussi plus.",
     "t-dont-have-account": "Vous n'avez pas de compte ?",
-    "t-sign-in-to-continue": "Connectez-vous pour continuer à"
+    "t-sign-in-to-continue": "Connectez-vous pour continuer à",
+    "t-admin-created-successfully": "Admin créé avec succès",
+    "t-admin-deleted-successfully": "Admin supprimé avec succès",
+    "t-admin-creation-failed": "Échec de la création de l'admin",
+    "t-admin-deletion-failed": "Échec de la suppression de l'admin",
+    "t-admin": "Administrateur"
 }
