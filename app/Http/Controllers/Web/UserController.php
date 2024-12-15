@@ -8,6 +8,7 @@ use App\Models\User;
 use Illuminate\Contracts\View\View;
 use Illuminate\Http\Request;
 
+
 class UserController extends Controller
 {
     /**
@@ -60,8 +61,14 @@ class UserController extends Controller
     public function show(string $id) //: View
     {
         $user = User::with('personne', 'profile')->findOrFail($id);
+        $minutes = 5;
+        views($user)
+            ->cooldown($minutes)
+            ->record();
+        $view = views($user)->count();
         return view('member.show', [
-            'user' => $user
+            'user' => $user,
+            'view' => $view
         ]);
     }
 

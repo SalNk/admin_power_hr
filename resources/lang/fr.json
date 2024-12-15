@@ -213,5 +213,8 @@
     "t-admin-deleted-successfully": "Admin supprimé avec succès",
     "t-admin-creation-failed": "Échec de la création de l'admin",
     "t-admin-deletion-failed": "Échec de la suppression de l'admin",
-    "t-admin": "Administrateur"
+    "t-admin": "Administrateur",
+    "t-prospects": "Prospects",
+    "t-view": "Vue",
+    "t-rating": "Evaluation"
 }

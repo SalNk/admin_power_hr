@@ -3,7 +3,7 @@
         'name' => 'laravel/laravel',
         'pretty_version' => 'dev-main',
         'version' => 'dev-main',
-        'reference' => '2ce9ac7871b186d7d3066059af2a4b65797747f8',
+        'reference' => '8c509890f9e19b7763e9b387352789584da444cf',
         'type' => 'project',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
@@ -69,6 +69,15 @@
             'replaced' => array(
                 0 => '*',
             ),
+        ),
+        'cyrildewit/eloquent-viewable' => array(
+            'pretty_version' => 'v7.0.3',
+            'version' => '7.0.3.0',
+            'reference' => '5807f5c6d3741926db8aa9a8ce2efc201c81edef',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../cyrildewit/eloquent-viewable',
+            'aliases' => array(),
+            'dev_requirement' => false,
         ),
         'dasprid/enum' => array(
             'pretty_version' => '1.0.5',
@@ -409,6 +418,15 @@
                 0 => 'v11.10.0',
             ),
         ),
+        'jaybizzle/crawler-detect' => array(
+            'pretty_version' => 'v1.3.0',
+            'version' => '1.3.0.0',
+            'reference' => 'be155e11613fa618aa18aee438955588d1092a47',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../jaybizzle/crawler-detect',
+            'aliases' => array(),
+            'dev_requirement' => false,
+        ),
         'kodova/hamcrest-php' => array(
             'dev_requirement' => true,
             'replaced' => array(
@@ -445,7 +463,7 @@
         'laravel/laravel' => array(
             'pretty_version' => 'dev-main',
             'version' => 'dev-main',
-            'reference' => '2ce9ac7871b186d7d3066059af2a4b65797747f8',
+            'reference' => '8c509890f9e19b7763e9b387352789584da444cf',
             'type' => 'project',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),

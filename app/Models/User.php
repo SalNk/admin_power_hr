@@ -16,8 +16,11 @@ use Laravel\Sanctum\HasApiTokens;
 use Spatie\Permission\Traits\HasRoles;
 use zoparga\ReviewRateable\Contracts\ReviewRateable;
 use zoparga\ReviewRateable\Traits\ReviewRateable as ReviewRateableTrait;
+use Illuminate\Database\Eloquent\Model;
+use CyrildeWit\EloquentViewable\InteractsWithViews;
+use CyrildeWit\EloquentViewable\Contracts\Viewable;
 
-class User extends Authenticatable implements ReviewRateable
+class User extends Authenticatable implements ReviewRateable, Viewable
 {
     use HasApiTokens;
     use HasFactory;
@@ -27,6 +30,7 @@ class User extends Authenticatable implements ReviewRateable
     use TwoFactorAuthenticatable;
     use ReviewRateableTrait;
     use HasRoles, SoftDeletes;
+    use InteractsWithViews;
 
     /**
      * The attributes that are mass assignable.

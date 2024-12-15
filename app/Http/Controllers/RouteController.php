@@ -8,6 +8,7 @@ use App\Models\JobUser;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Akaunting\Apexcharts\Chart;
+use App\Models\Prospect;
 
 class RouteController extends Controller
 {
@@ -101,11 +102,13 @@ class RouteController extends Controller
                 ]
             ]);
 
+        $prospects = Prospect::all();
         return view('index', [
             'users' => $users,
             'employees' => $users->filter(fn($user) => $user->is_employee),
             'candidates' => $users->filter(fn($user) => $user->is_candidate),
             'customers' => $users->filter(fn($user) => $user->is_customer),
+            'prospects' => $prospects,
             'hirings' => $hirings,
             'userChart' => $userChart,
             'jobsChart' => $jobsChart,

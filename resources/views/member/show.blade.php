@@ -70,6 +70,12 @@
                                 </h5>
                                 <p class="text-slate-500 dark:text-zink-200">{{__('t-gender')}}</p>
                             </li>
+                            <li class="px-5">
+                                <h5>
+                                    {{$view}}
+                                </h5>
+                                <p class="text-slate-500 dark:text-zink-200">{{__('t-view')}}</p>
+                            </li>
                             @if($user->ratings)
                                 <li class="px-5">
                                     <h5>
@@ -126,9 +132,8 @@
                                 data-lucide="mail" class="size-4"></i></a>
                         <button type="button" data-modal-target="addDocuments"
                             class="text-white transition-all duration-200 ease-linear btn bg-custom-500 border-custom-500 hover:text-white hover:bg-custom-600 hover:border-custom-600 focus:text-white focus:bg-custom-600 focus:border-custom-600 focus:ring focus:ring-custom-100 active:text-white active:bg-custom-600 active:border-custom-600 active:ring active:ring-custom-100 dark:ring-custom-400/20">
-                            {{__('t-hire')}}
+                            {{__('t-rating')}}
                         </button>
-
                     </div>
                 </div>
             </div><!--end grid-->

@@ -214,5 +214,8 @@
     "t-admin-deleted-successfully": "Admin deleted successfully",
     "t-admin-creation-failed": "Admin creation failed",
     "t-admin-deletion-failed": "Admin deletion failed",
-    "t-admin": "Administrator"
+    "t-admin": "Administrator",
+    "t-prospects": "Prospects",
+    "t-view": "View",
+    "t-rating": "Rating"
 }
