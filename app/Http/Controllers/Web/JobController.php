@@ -68,9 +68,13 @@ class JobController extends Controller
     {
         $job = Job::with('user', 'candidates')-> where('matricule', $matricule)->firstOrFail();
         $matchingUsers = $job->findMatchingUsers();
+        $minutes = 5;
+        $view = views($job)->cooldown($minutes)
+            ->record();
         return view('job.show',[
             'job' => $job,
-            'matchingUsers' => $matchingUsers
+            'matchingUsers' => $matchingUsers,
+            'view' => $view
         ]);
     }
 
