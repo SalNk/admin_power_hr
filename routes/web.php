@@ -22,7 +22,11 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('index/{locale}', [TailwickController::class, 'lang']);
 
-Route::middleware(['auth:sanctum', config('jetstream.auth_session'), 'verified',])->group(function () {
+Route::get('/access-denied', function () {
+    return view('denied.show');
+})->name('access-denied');
+
+Route::middleware(['auth:sanctum', config('jetstream.auth_session'), 'verified','admin'])->group(function () {
     Route::resource('customers', ClientController::class);
     Route::resource('users', UserController::class)->only([
         'index', 'show', 'destroy'
@@ -37,8 +41,6 @@ Route::middleware(['auth:sanctum', config('jetstream.auth_session'), 'verified',
     });
     Route::get("/", [RouteController::class, 'index'])->name('dashboard');
     Route::get("{any}", [RouteController::class, 'routes']);
-
-    
 });
 
 
