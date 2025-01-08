@@ -52,7 +52,7 @@ class JobController extends Controller
                 'user_id' => $user->id,
                 'job_id' => $job->id,
                 'is_active' => true,
-                'matricule' => 'OFR'.rand(1000, 9999),
+                'matricule' => uniqid(),
             ]);
             return redirect()->route('jobs.show', ['matricule' => $job->matricule, 'fragment' => 'projectsTabs']);
         } catch (\Throwable $th) {

@@ -13,7 +13,8 @@ class ClientController extends Controller
      */
     public function index()
     {
-         $customers = User::role('customer')->with('customer')->paginate(20);
+        $customers = User::role('customer')->with('customer')->paginate(20);
+        dd($customers);
         return view('customer.index', [
             'customers' => $customers
         ]);

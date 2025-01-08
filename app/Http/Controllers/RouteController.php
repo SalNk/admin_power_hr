@@ -12,19 +12,20 @@ use App\Models\Prospect;
 
 class RouteController extends Controller
 {
-    public function index() {
+    public function index()
+    {
         $users = User::with(['personne', 'profile', 'ratings', 'roles'])
             ->get()
             ->map(function ($user) {
                 $user->setAttribute('is_employee', $user->hasRole('employee'));
-                $user->setAttribute('is_candidate', $user->hasRole('candidate')); 
+                $user->setAttribute('is_candidate', $user->hasRole('candidate'));
                 $user->setAttribute('is_customer', $user->hasRole('customer'));
                 return $user;
             });
-        
-        
 
-        $hirings = JobUser::where('is_active', true)->with(['user', 'job'])->limit(10) ->get();
+
+
+        $hirings = JobUser::where('is_active', true)->with(['user', 'job'])->limit(10)->get();
 
         $usersByMonth = User::selectRaw('COUNT(*) as count, MONTH(created_at) as month')
             ->whereYear('created_at', date('Y'))
@@ -32,15 +33,15 @@ class RouteController extends Controller
             ->orderBy('month')
             ->pluck('count', 'month')
             ->toArray();
-        
-        $jobsByMonth = Job::selectRaw('COUNT(*) as count, MONTH(created_at) as month')
-        ->whereYear('created_at', date('Y'))
-        ->groupBy('month')
-        ->orderBy('month')
-        ->pluck('count', 'month')
-        ->toArray();
 
-        $months = array_map(function($month) {
+        $jobsByMonth = Job::selectRaw('COUNT(*) as count, MONTH(created_at) as month')
+            ->whereYear('created_at', date('Y'))
+            ->groupBy('month')
+            ->orderBy('month')
+            ->pluck('count', 'month')
+            ->toArray();
+
+        $months = array_map(function ($month) {
             return date('F', mktime(0, 0, 0, $month, 1));
         }, array_keys($jobsByMonth));
 
@@ -115,8 +116,9 @@ class RouteController extends Controller
         ]);
     }
 
-    public function routes(Request $request) {
-        if(view()->exists($request->path())) {
+    public function routes(Request $request)
+    {
+        if (view()->exists($request->path())) {
             return view($request->path());
         } else {
             return abort(404);

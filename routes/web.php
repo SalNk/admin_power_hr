@@ -26,16 +26,18 @@ Route::get('/access-denied', function () {
     return view('denied.show');
 })->name('access-denied');
 
-Route::middleware(['auth:sanctum', config('jetstream.auth_session'), 'verified','admin'])->group(function () {
+Route::middleware(['auth:sanctum', config('jetstream.auth_session'), 'verified', 'admin'])->group(function () {
     Route::resource('customers', ClientController::class);
     Route::resource('users', UserController::class)->only([
-        'index', 'show', 'destroy'
+        'index',
+        'show',
+        'destroy'
     ]);
     Route::post('user/ratings', [UserController::class, 'rating'])->name('user.rating');
     Route::resource('admin', AdminController::class);
     Route::resource('jobs', JobController::class);
 
-    Route::controller(ProspetController::class)->name('prospect.')->prefix('prospect')->group(function(){
+    Route::controller(ProspetController::class)->name('prospect.')->prefix('prospect')->group(function () {
         Route::get('/', 'index')->name('index');
         Route::get('{id}', 'show')->name('show');
     });
