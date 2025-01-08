@@ -44,13 +44,13 @@ class DatabaseSeeder extends Seeder
         $user = User::factory()->withRoles(['admin'])->create();
 
         // Create multiple users with the same role
-        $users = User::factory(2)->withRoles('candidate')->create();
-        $employees = User::factory(2)->withRoles('employee')->create();
-        $customers = User::factory(1)->withRoles('customer')->create();
+        $users = User::factory(20)->withRoles('candidate')->create();
+        $employees = User::factory(20)->withRoles('employee')->create();
+        $customers = User::factory(10)->withRoles('customer')->create();
 
 
-        Personne::factory(1)->create();
-        Profile::factory(1)->create();
+        Personne::factory(10)->create();
+        Profile::factory(10)->create();
 
 
         Job::factory(10)->create();
