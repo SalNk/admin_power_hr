@@ -30,7 +30,7 @@
 
 
     <!-- App favicon -->
-    <link rel="shortcut icon" href="{{ URL::asset('images/favicon/favicon.ico') }}">
+    <link rel="shortcut icon" href="{{ URL::asset('images/favicon/favicon.png') }}">
 
     @include('layouts.head-css')
     <!-- Styles -->
